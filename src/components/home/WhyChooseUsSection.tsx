@@ -3,7 +3,6 @@ import ButtonWithArrow from "@/components/ui/button-with-arrow";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import Image from "next/image";
 import FacebookIcon from "@/components/ui/icons/FacebookIcon";
-import TwitterIcon from "@/components/ui/icons/TwitterIcon";
 import LinkedInIcon from "@/components/ui/icons/LinkedInIcon";
 import InstagramIcon from "@/components/ui/icons/InstagramIcon";
 import YouTubeIcon from "@/components/ui/icons/YouTubeIcon";
@@ -59,9 +58,9 @@ export default function WhyChooseUsSection() {
                   and reliable diagnostic insights.
                 </p>
                 <div className="flex space-x-2 mt-3">
-                  <a 
-                    href="https://www.facebook.com/ViScanDiagnostics/" 
-                    target="_blank" 
+                  <a
+                    href="https://www.facebook.com/ViScanDiagnostics/"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="w-8 h-8 bg-blue-600 rounded-full cursor-pointer flex items-center justify-center hover:bg-blue-700 transition-colors"
                   >
@@ -78,9 +77,9 @@ export default function WhyChooseUsSection() {
                       height={14}
                     />
                   </div> */}
-                  <a 
-                    href="https://in.linkedin.com/company/vi-scan-diagnostics" 
-                    target="_blank" 
+                  <a
+                    href="https://in.linkedin.com/company/vi-scan-diagnostics"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="w-8 h-8 bg-blue-700 rounded-full cursor-pointer flex items-center justify-center hover:bg-blue-800 transition-colors"
                   >
@@ -106,9 +105,9 @@ export default function WhyChooseUsSection() {
                       height={14}
                     />
                   </a>
-                  <a 
-                    href="https://www.youtube.com/channel/UCwchI5vi9HbZDKP2UIt3mMQ" 
-                    target="_blank" 
+                  <a
+                    href="https://www.youtube.com/channel/UCwchI5vi9HbZDKP2UIt3mMQ"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="w-8 h-8 bg-red-600 rounded-full cursor-pointer flex items-center justify-center hover:bg-red-700 transition-colors"
                   >

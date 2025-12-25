@@ -3,9 +3,7 @@
 import Hero from "./serviceSections/Hero";
 import WhyUs, { Feature } from "./serviceSections/WhyUs";
 import HowItWorks, { Step } from "./serviceSections/HowItWorks";
-import CTABookScan from "./serviceSections/CTABookScan";
 import KeyFeatures, { KeyFeature } from "./serviceSections/KeyFeatures";
-import FAQSection from "../bookscan/FAQSection";
 import {
   AnalyzeIcon,
   IconCertifiedBadge,

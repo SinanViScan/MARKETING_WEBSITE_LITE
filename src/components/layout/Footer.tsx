@@ -8,7 +8,6 @@ import { usePathname } from "next/navigation";
 import { servicesLinks } from "@/lib/footer-services";
 import { getFooterBackground, shouldUseDarkTheme } from "@/lib/theme";
 import FacebookIcon from "@/components/ui/icons/FacebookIcon";
-import TwitterIcon from "@/components/ui/icons/TwitterIcon";
 import LinkedInIcon from "@/components/ui/icons/LinkedInIcon";
 import InstagramIcon from "@/components/ui/icons/InstagramIcon";
 import YouTubeIcon from "@/components/ui/icons/YouTubeIcon";
@@ -143,9 +142,9 @@ export default function Footer() {
                       className="transition-opacity hover:opacity-80 flex items-center"
                       style={{ color: '#7D2682', height: `${iconHeight}px` }}
                     >
-                      <Icon 
-                        className="transition-colors" 
-                        width={iconWidth} 
+                      <Icon
+                        className="transition-colors"
+                        width={iconWidth}
                         height={iconHeight}
                         aria-hidden="true"
                       />
@@ -165,15 +164,13 @@ export default function Footer() {
               >
                 <span>{section.title}</span>
                 <ChevronUp
-                  className={`lg:h-5 lg:w-5 h-3 w-3 transition-transform md:hidden ml-2 ${
-                    openSections[section.key] ? "" : "rotate-180"
-                  }`}
+                  className={`lg:h-5 lg:w-5 h-3 w-3 transition-transform md:hidden ml-2 ${openSections[section.key] ? "" : "rotate-180"
+                    }`}
                 />
               </button>
               <ul
-                className={`space-y-3 transition-all duration-300 md:block text-center md:text-left ${
-                  openSections[section.key] ? "block" : "hidden md:block"
-                }`}
+                className={`space-y-3 transition-all duration-300 md:block text-center md:text-left ${openSections[section.key] ? "block" : "hidden md:block"
+                  }`}
               >
                 {section.links.map((link, index) => (
                   <li key={index}>
@@ -197,15 +194,13 @@ export default function Footer() {
             >
               <span>Get in touch</span>
               <ChevronUp
-                className={`lg:h-5 lg:w-5 h-3 w-3 transition-transform md:hidden ml-2 ${
-                  openSections.contact ? "" : "rotate-180"
-                }`}
+                className={`lg:h-5 lg:w-5 h-3 w-3 transition-transform md:hidden ml-2 ${openSections.contact ? "" : "rotate-180"
+                  }`}
               />
             </button>
             <div
-              className={`space-y-4 transition-all duration-300 md:block text-center md:text-left ${
-                openSections.contact ? "block" : "hidden md:block"
-              }`}
+              className={`space-y-4 transition-all duration-300 md:block text-center md:text-left ${openSections.contact ? "block" : "hidden md:block"
+                }`}
             >
               <div className="flex items-center justify-center md:justify-start space-x-3">
                 <EmailIcon className={`${isDarkTheme ? 'text-gray-300' : 'text-gray-500'} flex-shrink-0`} width={16} height={12} />

@@ -2,18 +2,13 @@
 
 import { Suspense, lazy, useMemo } from "react";
 import DoctorsHero from "@/components/doctors/DoctorsHero";
-import HowItWorksDoc, { Step } from "@/components/doctors/HowItWorksDoc";
 import { BenefitCard } from "@/components/doctors/BenefitsSection";
 
 // Lazy load heavy components
 const OurService = lazy(() => import("@/components/doctors/OurService"));
-const CentersSection = lazy(() => import("@/components/home/CentersSection"));
 const ServicesSection = lazy(() => import("@/components/home/ServicesSection"));
-const ServicesShowcase = lazy(() => import("@/components/doctors/ServicesShowcase"));
 const RegisterSection = lazy(() => import("@/components/doctors/RegisterSection"));
 const BenefitsSection = lazy(() => import("@/components/doctors/BenefitsSection"));
-const FAQSection = lazy(() => import("@/components/bookscan/FAQSection"));
-const CTABookScan = lazy(() => import("@/components/services/serviceSections/CTABookScan"));
 
 // Skeleton loader component
 const SectionSkeleton = () => (
@@ -21,26 +16,7 @@ const SectionSkeleton = () => (
 );
 
 // Static data - moved outside component for better performance
-const steps: Step[] = [
-  {
-    id: 1,
-    title: "Register on Our Platform",
-    description:
-      "Easily sign up to join our network of empowered dental professionals.",
-  },
-  {
-    id: 2,
-    title: "Explore Our Services",
-    description:
-      "Browse our comprehensive diagnostic offerings—including CBCT, OPG, L‑Ceph, pathology, and tele‑reporting—to find the right tools for your clinical needs.",
-  },
-  {
-    id: 3,
-    title: "Start Referring Patients",
-    description:
-      "Refer patients seamlessly and receive fast, accurate reports and images through Vi‑Scan's secure platform—optimized for efficient clinical workflows.",
-  },
-];
+
 
 const benefitCards: BenefitCard[] = [
   {
@@ -80,27 +56,7 @@ const benefitCards: BenefitCard[] = [
 
 export default function DoctorsPage() {
   // Memoize JSX elements that are reused
-  const howItWorksHeader = useMemo(
-    () => (
-      <h2 className="section-header max-md:text-center">
-        Your Pathway to
-        <br />
-        <span
-          className="text-transparent font-medium"
-          style={{
-            background:
-              "linear-gradient(246.94deg, #EBB5F3 -28.81%, #FEF2F2 25.55%, #FEE2E1 37.61%, #C59BC7 100%)",
-            backgroundClip: "text",
-            WebkitBackgroundClip: "text",
-          }}
-        >
-          Diagnotstic
-        </span>{" "}
-        Excellence
-      </h2>
-    ),
-    []
-  );
+
 
   const benefitsTitle = useMemo(
     () => (

@@ -2,11 +2,9 @@ import CentersHero from "@/components/centers/CentersHero";
 import WhyPartnerSection from "../../components/centers/WhyPartnerSection";
 import ToolsSection from "@/components/centers/ToolsSection";
 import HowItWorksDoc, { Step } from "@/components/doctors/HowItWorksDoc";
-import CTABookScan from "@/components/services/serviceSections/CTABookScan";
 import BenefitsSection, {
   BenefitCard,
 } from "@/components/doctors/BenefitsSection";
-import FAQSection from "@/components/bookscan/FAQSection";
 
 const steps: Step[] = [
   {

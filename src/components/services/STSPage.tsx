@@ -3,9 +3,7 @@
 import Hero from "./serviceSections/Hero";
 import WhyUs, { Feature } from "./serviceSections/WhyUs";
 import HowItWorks, { Step } from "./serviceSections/HowItWorks";
-import CTABookScan from "./serviceSections/CTABookScan";
 import KeyFeatures, { KeyFeature } from "./serviceSections/KeyFeatures";
-import FAQSection from "../bookscan/FAQSection";
 import {
   AnalyzeIcon,
   IconCertifiedBadge,
@@ -148,7 +146,7 @@ export default function STSPage() {
             Soft Tissue Screening
           </span>
           ?
-        </h2> }
+        </h2>}
         sectionSubtext="We combine advanced tools with expert insight to screen smarter."
         imageSrc="/service-detail/sts-why-us.webp"
         header="What is Soft Tissue Screening?"

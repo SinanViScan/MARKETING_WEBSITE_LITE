@@ -43,12 +43,12 @@ export default function AnimatedSection({
   // Use IntersectionObserver to avoid forced reflow
   useEffect(() => {
     if (immediate || !elementRef.current) return;
-    
+
     // Use IntersectionObserver to check initial visibility without forced reflow
     const checkInitialVisibility = () => {
       const element = elementRef.current;
       if (!element) return;
-      
+
       const initialObserver = new IntersectionObserver(
         ([entry]) => {
           // If element is initially intersecting, make it visible immediately
@@ -59,15 +59,15 @@ export default function AnimatedSection({
           }
           initialObserver.disconnect();
         },
-        { 
+        {
           threshold: 0,
           rootMargin: "200px" // Match the rootMargin from useInViewRepeating
         }
       );
-      
+
       initialObserver.observe(element);
     };
-    
+
     // Check after a short delay to ensure DOM is ready
     const timer = setTimeout(checkInitialVisibility, 0);
     return () => clearTimeout(timer);
@@ -97,10 +97,8 @@ export default function AnimatedSection({
 
   // Combine refs
   const combinedRef = (node: HTMLDivElement | null) => {
-    if (typeof ref === 'function') {
-      ref(node);
-    } else if (ref && 'current' in ref) {
-      (ref as { current: HTMLDivElement | null }).current = node;
+    if (ref) {
+      ref.current = node;
     }
     elementRef.current = node;
   };

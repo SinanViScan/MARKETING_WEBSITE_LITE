@@ -12,7 +12,6 @@ import {
 } from "./icons/FeatureIcons";
 import HowItWorks, { Step } from "./serviceSections/HowItWorks";
 import KeyFeatures, { KeyFeature } from "./serviceSections/KeyFeatures";
-import FAQSection from "../bookscan/FAQSection";
 
 // Features (icons and layout follow the same structure as STSPage for visual consistency)
 export const features: Feature[] = [
@@ -138,10 +137,10 @@ export default function LCEPPage() {
               WebkitBackgroundClip: "text",
             }}
           >
-           L-Ceph
+            L-Ceph
           </span>
           Services?
-        </h2> }
+        </h2>}
         sectionSubtext="As India's first, we use our expert knowledge and advanced technology to give clear, detailed answers for better dental care."
         imageSrc="/service-detail/lceph.webp"
         header="What is L-Ceph?"

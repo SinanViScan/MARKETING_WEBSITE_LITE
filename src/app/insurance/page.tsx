@@ -1,11 +1,11 @@
-import FAQSection from "@/components/bookscan/FAQSection";
+
 import ToolsSection from "@/components/centers/ToolsSection";
 import BenefitsSection, {
   BenefitCard,
 } from "@/components/doctors/BenefitsSection";
 import HowItWorksDoc, { Step } from "@/components/doctors/HowItWorksDoc";
 import InsuranceHero from "@/components/insurance/InsuranceHero";
-import CTABookScan from "@/components/services/serviceSections/CTABookScan";
+
 
 const steps: Step[] = [
   {

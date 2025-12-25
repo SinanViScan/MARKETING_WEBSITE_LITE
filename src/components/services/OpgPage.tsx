@@ -3,9 +3,7 @@
 import Hero from "./serviceSections/Hero";
 import WhyUs, { Feature } from "./serviceSections/WhyUs";
 import HowItWorks, { Step } from "./serviceSections/HowItWorks";
-import CTABookScan from "./serviceSections/CTABookScan";
 import KeyFeatures, { KeyFeature } from "./serviceSections/KeyFeatures";
-import FAQSection from "../bookscan/FAQSection";
 import {
   AnalyzeIcon,
   IconCertifiedBadge,
@@ -127,21 +125,21 @@ export default function OpgPage() {
         pageNumber="02"
         features={features}
         sectionHeader={<h2 className="section-header">
-        Why Choose Vi-Scan for
-        <br className="hidden sm:block" />
-        <span
+          Why Choose Vi-Scan for
+          <br className="hidden sm:block" />
+          <span
             className="text-transparent ml-2 mr-2"
             style={{
-            background:
+              background:
                 "linear-gradient(246.94deg, #EBB5F3 -28.81%, #FEF2F2 25.55%, #FEE2E1 37.61%, #C59BC7 100%)",
-            backgroundClip: "text",
-            WebkitBackgroundClip: "text",
+              backgroundClip: "text",
+              WebkitBackgroundClip: "text",
             }}
-        >
+          >
             OPG
-        </span>
-        Services?
-        </h2> }
+          </span>
+          Services?
+        </h2>}
         sectionSubtext="As India's first, we use our expert knowledge and advanced technology to give clear, detailed answers for better dental care."
         imageSrc="/service-detail/opg-why-us.webp"
         header="What is OPG?"

@@ -3,12 +3,7 @@
 import Hero from "./serviceSections/Hero";
 import WhyUs, { Feature } from "./serviceSections/WhyUs";
 import HowItWorks, { Step } from "./serviceSections/HowItWorks";
-import UnderstandingReports, {
-  ReportTab,
-} from "./serviceSections/UnderstandingReports";
-import CTABookScan from "./serviceSections/CTABookScan";
 import KeyFeatures, { KeyFeature } from "./serviceSections/KeyFeatures";
-import FAQSection from "../bookscan/FAQSection";
 import {
   IconCertifiedBadge,
   IconDesktopSupport,
@@ -141,7 +136,7 @@ export default function TelePage() {
             Teleradiology
           </span>
           ?
-        </h2> }
+        </h2>}
         sectionSubtext="Trusted by clinics for fast, accurate, and affordable reporting by expert oral radiologists."
         imageSrc="/service-detail/tele-report-why-us.webp"
         header="What is Dental Telereporting?"

@@ -57,15 +57,7 @@ const WhyChooseUsSection = nextDynamic(() => import("@/components/home/WhyChoose
   loading: () => <div className="h-[400px] bg-gray-50 animate-pulse" />,
 });
 
-const ViScanNetworkSection = nextDynamic(() => import("@/components/home/NetworkSection"), {
-  ssr: true,
-  loading: () => <div className="h-[500px] bg-white animate-pulse" />,
-});
 
-const CentersSection = nextDynamic(() => import("@/components/home/CentersSection"), {
-  ssr: true,
-  loading: () => <div className="h-[600px] bg-gray-50 animate-pulse" />,
-});
 
 const ServicesSection = nextDynamic(() => import("@/components/home/ServicesSection"), {
   ssr: true,
@@ -82,22 +74,11 @@ const ProductSection = nextDynamic(() => import("@/components/home/ProductSectio
   loading: () => <div className="h-[400px] bg-gray-50 animate-pulse" />,
 });
 
-const TestimonialsSection = nextDynamic(() => import("@/components/home/TestimonialsSection"), {
-  ssr: true,
-  loading: () => <div className="h-[500px] bg-white animate-pulse" />,
-});
-
-const SuccessStory = nextDynamic(() => import("@/components/home/SuccessStory"), {
-  ssr: true,
-  loading: () => <div className="h-[300px] bg-gradient-to-br from-purple-100 to-pink-100 animate-pulse" />,
-});
 
 
 
-const AboutUsSection = nextDynamic(() => import("@/components/home/AboutUsSection"), {
-  ssr: true,
-  loading: () => <div className="h-[400px] bg-white animate-pulse" />,
-});
+
+
 
 export default function Home() {
   return (
@@ -108,7 +89,7 @@ export default function Home() {
       {/* <CentersSection /> */}
       <WhyChooseUsSection />
       <PartnerSection />
-      
+
       {/* Below-the-fold content - lazy loaded with loading states */}
       {/* <AboutUsSection /> */}
       <ProductSection />

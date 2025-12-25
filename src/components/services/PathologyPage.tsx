@@ -3,12 +3,6 @@
 import Hero from "./serviceSections/Hero";
 import WhyUs, { Feature } from "./serviceSections/WhyUs";
 import HowItWorks, { Step } from "./serviceSections/HowItWorks";
-// Removed unused UnderstandingReports and ReportTab imports
-import CTABookScan from "./serviceSections/CTABookScan";
-import PackagesSection, {
-  PackageItem,
-} from "./serviceSections/PackagesSection";
-import FAQSection from "../bookscan/FAQSection";
 import {
   IconCertifiedBadge,
   IconDesktopSupport,
@@ -102,7 +96,7 @@ export default function PathologyPage() {
             Pathology
           </span>
           Services?
-        </h2> }
+        </h2>}
         sectionSubtext="As India's first, we use our expert knowledge and advanced technology to give clear, detailed answers for better dental care."
         features={features}
         imageSrc="/service-detail/blood-test.webp"

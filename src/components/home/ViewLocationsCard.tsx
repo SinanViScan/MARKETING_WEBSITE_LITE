@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
@@ -59,7 +58,7 @@ const ViewLocationsCard = ({
           {/* Text */}
           <div className="flex-1 ml-3 mr-3">
             <span className={`text-gray-800 font-normal ${variant === "mobile" ? "text-10px" : "text-xs"}`}>
-              70+ Diagnostic Centers 
+              70+ Diagnostic Centers
             </span>
           </div>
         </div>

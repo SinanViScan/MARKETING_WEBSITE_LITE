@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
-import Button from "@/components/ui/button";
 import ButtonWithArrow from "@/components/ui/button-with-arrow";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 
@@ -108,21 +107,21 @@ const ProductSection = () => {
             </p>
           </AnimatedSection>
           <div className="flex justify-center gap-4 mt-6">
-            <a 
-            href="https://aidev.viscandiagnostics.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div className="flex flex-row gap-4">
-              <ButtonWithArrow
-                variant="secondary"
-                size="sm"
-                className="px-3 py-1.5"
-                arrowHoverAnimation={true}
-              >
-                Take a Demo
-              </ButtonWithArrow>
-            </div>
+            <a
+              href="https://aidev.viscandiagnostics.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="flex flex-row gap-4">
+                <ButtonWithArrow
+                  variant="secondary"
+                  size="sm"
+                  className="px-3 py-1.5"
+                  arrowHoverAnimation={true}
+                >
+                  Take a Demo
+                </ButtonWithArrow>
+              </div>
             </a>
             {/* <div className="flex flex-row gap-4">
               <Button
@@ -138,44 +137,44 @@ const ProductSection = () => {
         </div>
 
         {/* Image positioned below buttons */}
-      <div className="relative mt-6 h-[360px] max-md:h-[280px] w-full flex justify-center items-center overflow-hidden">
-  {/* Left back tablet */}
-  <div className="absolute z-0 -translate-x-[160px] rotate-[-8deg] opacity-55">
-    <div className="relative w-[520px] h-[320px] max-md:w-[340px] max-md:h-[210px]">
-      <Image
-        src="/home/ai/dashboard.avif"
-        alt="AI dashboard left"
-        fill
-        className="object-contain"
-      />
-    </div>
-  </div>
+        <div className="relative mt-6 h-[360px] max-md:h-[280px] w-full flex justify-center items-center overflow-hidden">
+          {/* Left back tablet */}
+          <div className="absolute z-0 -translate-x-[160px] rotate-[-8deg] opacity-55">
+            <div className="relative w-[520px] h-[320px] max-md:w-[340px] max-md:h-[210px]">
+              <Image
+                src="/home/ai/dashboard.avif"
+                alt="AI dashboard left"
+                fill
+                className="object-contain"
+              />
+            </div>
+          </div>
 
-  {/* Right back tablet */}
-  <div className="absolute z-0 translate-x-[160px] rotate-[8deg] opacity-55">
-    <div className="relative w-[520px] h-[320px] max-md:w-[340px] max-md:h-[210px]">
-      <Image
-        src="/home/ai/dashboard.avif"
-        alt="AI dashboard right"
-        fill
-        className="object-contain"
-      />
-    </div>
-  </div>
+          {/* Right back tablet */}
+          <div className="absolute z-0 translate-x-[160px] rotate-[8deg] opacity-55">
+            <div className="relative w-[520px] h-[320px] max-md:w-[340px] max-md:h-[210px]">
+              <Image
+                src="/home/ai/dashboard.avif"
+                alt="AI dashboard right"
+                fill
+                className="object-contain"
+              />
+            </div>
+          </div>
 
-  {/* Center main tablet */}
-  <div className="relative z-10">
-    <div className="relative w-[600px] h-[360px] max-md:w-[380px] max-md:h-[240px]">
-      <Image
-        src="/home/ai/dashboard.avif"
-        alt="AI dashboard main"
-        fill
-        priority
-        className="object-contain"
-      />
-    </div>
-  </div>
-</div>
+          {/* Center main tablet */}
+          <div className="relative z-10">
+            <div className="relative w-[600px] h-[360px] max-md:w-[380px] max-md:h-[240px]">
+              <Image
+                src="/home/ai/dashboard.avif"
+                alt="AI dashboard main"
+                fill
+                priority
+                className="object-contain"
+              />
+            </div>
+          </div>
+        </div>
 
 
         {/* Gradient black overlay at bottom */}

@@ -4,9 +4,7 @@ import Hero from "./serviceSections/Hero";
 import WhyUs, { Feature } from "./serviceSections/WhyUs";
 import HowItWorks, { Step } from "./serviceSections/HowItWorks";
 // Removed unused UnderstandingReports and ReportTab imports
-import CTABookScan from "./serviceSections/CTABookScan";
 import KeyFeatures, { KeyFeature } from "./serviceSections/KeyFeatures";
-import FAQSection from "../bookscan/FAQSection";
 import {
   IconCertifiedBadge,
   IconDesktopSupport,
@@ -145,7 +143,7 @@ export default function CBCTPage() {
             CBCT
           </span>
           ?
-        </h2> }
+        </h2>}
         sectionSubtext="Precision imaging. Trusted experts. Faster diagnostics."
         imageSrc="/service-detail/cbct.webp"
         header="What is CBCT (Cone Beam Computed Tomography)?"
