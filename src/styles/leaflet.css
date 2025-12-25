@@ -1,0 +1,47 @@
+/* Leaflet CSS - loaded only on pages/components that use maps */
+@import 'leaflet/dist/leaflet.css';
+
+/* Hide Leaflet controls */
+.leaflet-bottom, .leaflet-right {
+  display: none;
+}
+
+/* Fix map scrolling issues */
+.leaflet-container {
+  touch-action: pan-x pan-y;
+  z-index: 0 !important;
+}
+
+/* Ensure map doesn't overlap header */
+.leaflet-map-pane {
+  z-index: 0 !important;
+}
+
+.leaflet-tile-pane {
+  z-index: 0 !important;
+}
+
+/* Custom popup styling */
+.custom-popup .leaflet-popup-content-wrapper {
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+.custom-popup .leaflet-popup-content {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.custom-popup .leaflet-popup-tip {
+  display: none;
+}
+
+.custom-popup .leaflet-popup-close-button {
+  display: none;
+}
+
+
+

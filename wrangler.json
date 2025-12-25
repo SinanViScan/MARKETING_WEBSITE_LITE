@@ -1,0 +1,9 @@
+{
+    "name": "marketing",
+    "compatibility_date": "2025-08-13",
+    "assets": {
+        "directory": ".next",
+        "not_found_handling": "single-page-application",
+        "html_handling": "auto-trailing-slash"
+    }
+}

@@ -1,0 +1,331 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Font is loaded via Next.js font loader in layout.tsx - do not duplicate here */
+/* Leaflet CSS moved to src/styles/leaflet.css - loaded only in map components */
+
+/* CSS Animation System - Replacing Framer Motion for better performance */
+@import './animations.css';
+
+/* Theme CSS Variables - controlled by ThemeManager via .dark class */
+:root {
+  --bg-primary: white;
+  --text-primary: black;
+}
+
+:root.dark {
+  --bg-primary: #0D0D0D;
+  --text-primary: white;
+}
+
+/* Apply theme variables */
+html.dark {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+html.dark body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+@layer base {
+  html {
+    /* hide scrollbar for all browsers */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;     /* Firefox */
+  }
+
+
+  html::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+
+
+  body {
+    font-family: var(--font-outfit), "Outfit", sans-serif;
+    font-size: 12px;
+  
+    /* Hide scrollbar in all browsers */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;     /* Firefox */
+    overflow-y: auto;          /* allows scrolling without visible scrollbar */
+  }
+  
+  /* sm: ≥640px → 13px */
+  @media (min-width: 640px) {
+    body {
+      font-size: 13px;
+    }
+  }
+  
+  /* lg: ≥1024px → 14px */
+  @media (min-width: 1024px) {
+    body {
+      font-size: 14px;
+    }
+  }
+  
+  body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+}
+
+@layer components {
+  .max-web-container {
+    /* max-width: 2000px; */
+    max-width: 1530px;
+  }
+}
+
+
+@layer utilities {
+  @media (max-width: 1023px) {
+    .bg-gradient-mobile {
+      background: linear-gradient(64.53deg, #D590D8 -21.94%, #E8A9A7 80.32%, #E6B6B6 100.08%, #D059E2 189.18%) !important;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .bg-gradient-desktop {
+      background: linear-gradient(246.75deg, #EBB5F3 -28.81%, #FEF2F2 13.52%, #FEE2E1 22.9%, #E09FBB 71.48%) !important;
+    }
+  }
+
+  /* Hide scrollbar utility */
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;     /* Firefox */
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+
+  /* Smooth scrolling for timeline */
+  .timeline-scroll {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Enhanced touch scrolling for carousels */
+  .carousel-scroll {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-x;
+    overscroll-behavior-x: contain;
+  }
+
+  /* Font Size Utilities */
+  
+  /* Hero Section Font Sizes */
+  .hero-title {
+    @apply text-4xl sm:text-5xl md:text-[55px] xl:text-[70px] 2xl:text-[80px];
+  }
+  
+  .hero-subtitle {
+    @apply text-[16px] sm:text-[16px] lg:text-[18px];
+  }
+  
+  /* Small Text Sizes */
+  .text-10px {
+    font-size: 10px;
+  }
+  
+  .text-8px {
+    font-size: 8px;
+  }
+  
+  /* Responsive Small Text */
+  .text-small-responsive {
+    @apply text-[10px] max-xs:text-[8px];
+  }
+  
+  /* App Store Text Sizes */
+  .app-store-label {
+    @apply text-[10px];
+  }
+  
+  .app-store-title {
+    @apply text-xs font-semibold;
+  }
+  
+  /* Statistics Text Sizes */
+  .stats-number {
+    @apply text-xl max-sm:text-base xl:text-3xl;
+  }
+  
+  .stats-label {
+    @apply text-[10px] max-xs:text-[8px] xl:text-xs;
+  }
+  
+  /* Service Card Text Sizes */
+  .service-card-title-mobile {
+    @apply text-sm sm:text-base lg:text-base;
+  }
+  
+  .service-card-title-desktop {
+    @apply text-lg sm:text-base;
+  }
+  
+  /* Responsive Text Utilities */
+  .text-responsive-xs {
+    @apply text-xs max-lg:text-[10px];
+  }
+  
+  .text-responsive-sm {
+    @apply text-sm max-lg:text-xs;
+  }
+  
+  .text-responsive-base {
+    @apply text-base max-lg:text-sm;
+  }
+  
+  .text-responsive-lg {
+    @apply text-lg max-lg:text-base;
+  }
+  
+  .text-responsive-xl {
+    @apply text-xl max-lg:text-lg ;
+  }
+  
+  .text-responsive-2xl {
+    @apply text-2xl max-lg:text-xl;
+  }
+  
+  .text-responsive-3xl {
+    @apply text-3xl max-lg:text-2xl;
+  }
+  
+  .text-responsive-4xl {
+    @apply text-4xl max-lg:text-3xl;
+  }
+  
+  .text-responsive-5xl {
+    @apply text-5xl max-lg:text-4xl;
+  }
+}
+
+/* Default for screens > sm */
+.custom-clip {
+  clip-path: polygon(100% 0, 100% 85%, 20% 100%, 0% 90%, 0 20%);
+  border-radius: 0 10px 0 0;
+}
+
+/* Override for small screens (sm and below) */
+@media (max-width: 767px) {
+  .custom-clip {
+    clip-path: polygon(100% 0, 100% 90%, 20% 100%, 0% 95%, 0 10%);
+  }
+}
+
+.responsive-container {
+  @apply px-2 sm:px-4 md:px-6 lg:px-10 mx-auto;
+}
+.responsive-margin {
+  @apply mx-2 sm:mx-4 md:mx-6 lg:mx-10;
+}
+
+/* Section Header Typography */
+.section-header {
+  @apply text-2xl max-sm:text-center lg:text-3xl xl:text-4xl font-normal text-gray-900 leading-tight mb-2;
+}
+
+/* Section Subtext Typography */
+.section-subtext {
+  @apply lg:text-sm xl:text-base max-sm:px-2 xs:px-8 sm:px-0 max-sm:text-center  text-[#344054] max-w-md mt-0;
+}
+
+.header-font-size{
+  @apply text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-medium ;
+}
+.subtexts {
+  @apply lg:text-base  xl:text-xl sm:text-base text-sm ;
+}
+
+.year-text-size{
+  @apply  sm:text-5xl lg:text-6xl text-4xl
+}
+
+.about-us-header-subtext{
+  @apply text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl ;
+}
+
+.about-us-header{
+  @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl ;
+}
+
+/* Leaflet styles moved to src/styles/leaflet.css - loaded only in map components */
+.career-section-header {
+  @apply text-sm max-xs:-ml-2 xs:text-base min-[500px]:text-xl xs:transform text-start max-sm:translate-x-[20%] min-[500px]:max-w-[180px] translate-x-0 max-w-[120px] xs:max-w-[140px] sm:text-2xl xs:text-center md:text-3xl xl:text-4xl sm:font-medium text-gray-900 leading-tight mb-2;
+}
+
+/* Sparkle Animation */
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.2);
+  }
+}
+
+.sparkle {
+  animation: twinkle 3s ease-in-out infinite;
+}
+
+/* CSS Hover Animations - Replacing framer-motion for simple interactions */
+.hover-scale {
+  transition: transform 0.2s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+.hover-scale:active {
+  transform: scale(0.95);
+}
+
+.hover-lift {
+  transition: transform 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+}
+
+.hover-scale-sm {
+  transition: transform 0.2s ease;
+}
+
+.hover-scale-sm:hover {
+  transform: scale(1.1);
+}
+
+.hover-scale-sm:active {
+  transform: scale(0.9);
+}
+
+/* Fade-in animation for elements entering view */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Global loading cursor */
+.cursor-wait-all,
+.cursor-wait-all * {
+  cursor: wait !important;
+}
